@@ -2,6 +2,27 @@
 
 :root {
   --is-background-body: #15062E;
+  --is-border-header: #CCA63C33;
+  --is-color-one-text: #702BDB;
+  --is-color-tow-text: #C2994D;
+  --is-bg-lang: #FFFFFF0D;
+  --is-color-active: #6366F1;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/Arial-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Vazirmatn-Regular";
+  src: url("/assets/fonts/Vazirmatn-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+.font-Arial {
+  font-family: "Arial", sans-serif;
 }
 
 body {
