@@ -21,12 +21,25 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Vazirmatn-Regular";
+  src: url("/assets/fonts/Vazirmatn-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
 .font-Arial {
   font-family: "Arial", sans-serif;
 }
 
 body {
+  overflow-y: hidden;
+}
+
+html,
+body {
+  font-family: "Vazirmatn-Regular", sans-serif;
   background-color: var(--is-background-body);
+  overflow-x: hidden;
 }
 
 .container {
