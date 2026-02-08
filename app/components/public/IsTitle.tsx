@@ -4,7 +4,7 @@ interface dataTitle {
 }
 
 export default function IsTitle({ padding, title }: dataTitle) {
-    return <div className="flex" data-aos="fade-up">
+    return <div className="flex">
         <div className={`${padding} font-light text-xs md:text-base rounded-full bg-[var(--is-color-title)]`}>
             <h2>{title}</h2>
         </div>

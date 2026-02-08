@@ -4,7 +4,7 @@ import { useTranslationSetup } from "@/app/hooks/useTranslationSetup";
 import Image from "next/image";
 import Btn from "../public/Btn";
 import Link from "next/link";
-import IsTitle from "../public/IsTitle";
+import IsTitleOne from "../public/IsTitleOne";
 
 export default function Hero() {
     const { i18n, t, mounted } = useTranslationSetup();
@@ -29,11 +29,20 @@ export default function Hero() {
                         </div>
                     </div>
                     <div className="text-white flex flex-col items-center gap-[20px] md:gap-[56px]">
-                        <IsTitle padding="px-5 py-2 md:px-7 md:py-4" title={mounted ? t("space-platform") : '...'} />
-                        <div className="md:w-[650px] flex flex-col gap-[10px] md:gap-[16px] font-Changa">
-                            <h2 className="text-sm md:text-5xl leading-[1.5] font-semibold">{mounted ? t("travel-through-space") : '...'} <span className="text-[var(--is-color-active)]">{mounted ? t("the-universe") : '...'}</span> {mounted ? t("we-create-solutions") : '...'} <span className="text-[var(--is-color-active)]">{mounted ? t("solutions") : '...'}</span> {mounted ? t("beyond-earth") : '...'}</h2>
-                            <span className="text-xs md:text-xl font-normal text-[var(--is-color-text-hero)]">{mounted ? t("we-create-solutions-numbers") : '...'}</span>
-                        </div>
+                        <IsTitleOne padding="px-5 py-2 md:px-7 md:py-4" isTitle={mounted ? t("space-platform") : '...'} isTitleOne={`
+    <h2 class="text-sm md:text-5xl leading-[1.5] font-semibold">
+      ${mounted ? t("travel-through-space") : "..."}
+      <span class="text-[var(--is-color-active)]">
+        ${mounted ? t("the-universe") : "..."}
+      </span>
+      ${mounted ? t("we-create-solutions") : "..."}
+      <span class="text-[var(--is-color-active)]">
+        ${mounted ? t("solutions") : "..."}
+      </span>
+      ${mounted ? t("beyond-earth") : "..."}
+    </h2>
+  `}
+                            text={mounted ? t("we-create-solutions-numbers") : "..."} />
                         <div className="flex gap-[22px] md:gap-[32px]">
                             <Btn value={mounted ? t("contact-us") : '...'} padding='px-5 py-[7px] md:px-10 md:py-[11px]' />
                             <Link href="/">

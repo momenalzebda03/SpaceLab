@@ -40,16 +40,6 @@ export default function Numbers() {
                     </ul>
                 </div>
             </div>
-
-            <div className="h-[70px]">
-                <Image
-                    src="/images/bgShadow.webp"
-                    alt="خلفية"
-                    width={1920}
-                    height={70}
-                    className="w-full"
-                />
-            </div>
         </section>
     );
 }
