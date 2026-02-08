@@ -1,4 +1,5 @@
 "use client";
+
 import Image from 'next/image';
 import { Disclosure, DisclosureButton } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -8,6 +9,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useTranslationSetup } from '@/app/hooks/useTranslationSetup';
 // import { useDataNavigation } from '@/app/data/navigation';
 import Links from './Links';
+import Btn from './Btn';
 
 export default function Header() {
     const { t, mounted, i18n } = useTranslationSetup();
@@ -24,14 +26,14 @@ export default function Header() {
     const [lastScrollTop, setLastScrollTop] = useState(0);
     const dropdownRefs = useRef<Map<string, HTMLElement>>(new Map());
 
-    // const navigation = useDataNavigation();
-
     const handleScroll = () => {
         const currentScroll = window.scrollY;
         setIsScrollingDown(currentScroll > lastScrollTop);
         setScrollY(currentScroll);
 
-        if (currentScroll > lastScrollTop) setActiveDropdown(null);
+        if (currentScroll > lastScrollTop) {
+            setActiveDropdown(null);
+        }
 
         setLastScrollTop(currentScroll <= 0 ? 0 : currentScroll);
     };
@@ -70,8 +72,10 @@ export default function Header() {
     sticky
     transition-all
     duration-300
-    top-0        
+    top-0
     border border-b-2 border-[var(--is-border-header)]
+    bg-[var(--is-background-body)]
+    z-1
     ${isScrollingDown ? "-translate-y-full" : "translate-y-0"}
   `}
         >
@@ -87,14 +91,7 @@ export default function Header() {
                         </DisclosureButton>
                     </div>
                     <div className='hidden lg:flex gap-[24px]'>
-                        <button
-                            type="button"
-                            title="أبدأ مشروعك"
-                            className="rounded-full px-7 py-[11px] relative cursor-pointer bg-gradient-to-r from-(--is-color-one-text) to-(--is-color-tow-text) hover:from-(--is-color-tow-text) hover:to-(--is-color-one-text) transition-all duration-300 flex items-center gap-2 whitespace-nowrap"
-                        >
-                            <span className="relative z-1 text-white text-base font-normal">{mounted ? t("start-your-project") : '...'}</span>
-                            <Image src="/assets/icons/phone.svg" alt='phone' width={20} height={20} />
-                        </button>
+                        <Btn value={mounted ? t("start-your-project") : '...'} padding='px-7 py-[11px]' />
                         <button
                             onClick={toggleLanguage}
                             type="button"
@@ -115,10 +112,21 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className={`p-5 transition-all duration-800 absolute w-full lg:hidden rounded-lg bg-[var(--is-color-active)] text-white ${open ? 'right-0' : 'right-[-1000px]'}`}>
+            <div className={`flex flex-col gap-[14px] p-5 transition-all duration-800 absolute w-full lg:hidden rounded-lg bg-[var(--is-color-active)] text-white ${mounted ? i18n.language === 'ar' ? open ? 'right-0' : 'right-[-1000px]' : open ? 'left-0' : 'left-[-1000px]' : ""}`}>
                 <ul className="flex flex-col gap-[14px] container">
                     <Links />
                 </ul>
+                <div className='flex gap-[24px]'>
+                    <Btn value={mounted ? t("start-your-project") : '...'} padding='px-7 py-[11px]' />
+                    <button
+                        onClick={toggleLanguage}
+                        type="button"
+                        className="cursor-pointer bg-[var(--is-bg-lang)] border border-2 border-[var(--is-bg-lang)] rounded-full px-3 py-[5px] relative cursor-pointer flex items-center gap-[8px] whitespace-nowrap"
+                    >
+                        <Image src="/assets/icons/lang.svg" alt='lang' width={16} height={16} />
+                        <span className="mt-[2px] relative z-1 text-white text-sm font-medium">{locale.toUpperCase()}</span>
+                    </button>
+                </div>
             </div>
         </Disclosure >
     )

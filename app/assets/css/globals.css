@@ -7,6 +7,9 @@
   --is-color-tow-text: #C2994D;
   --is-bg-lang: #FFFFFF0D;
   --is-color-active: #6366F1;
+  --is-color-title: #34284A;
+  --is-border-btn: #CCA63C;
+  --is-color-text-hero: #D1D5DC;
 }
 
 @font-face {
@@ -16,15 +19,37 @@
 }
 
 @font-face {
-  font-family: "Vazirmatn-Regular";
+  font-family: "Vazirmatn";
   src: url("/assets/fonts/Vazirmatn-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Vazirmatn-Regular";
+  font-family: "Vazirmatn";
   src: url("/assets/fonts/Vazirmatn-Medium.ttf") format("truetype");
   font-weight: 500;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/assets/fonts/Vazirmatn-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Changa";
+  src: url("/assets/fonts/Changa-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Changa";
+  src: url("/assets/fonts/Changa-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+.font-Changa {
+  font-family: "Changa", sans-serif;
 }
 
 .font-Arial {
@@ -32,14 +57,8 @@
 }
 
 body {
-  overflow-y: hidden;
-}
-
-html,
-body {
-  font-family: "Vazirmatn-Regular", sans-serif;
+  font-family: "Vazirmatn", sans-serif;
   background-color: var(--is-background-body);
-  overflow-x: hidden;
 }
 
 .container {
@@ -49,4 +68,18 @@ body {
   margin-right: auto;
   padding-left: 0rem;
   padding-right: 0rem;
+}
+
+@keyframes rotatePlanet {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.moon {
+  animation: rotatePlanet 22s linear infinite;
 }
