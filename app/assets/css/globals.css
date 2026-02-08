@@ -10,6 +10,8 @@
   --is-color-title: #34284A;
   --is-border-btn: #CCA63C;
   --is-color-text-hero: #D1D5DC;
+  --is-color-tow-image: #260e50d5;
+  --is-color-in-platform: #D1D1D1;
 }
 
 @font-face {
@@ -37,6 +39,12 @@
 }
 
 @font-face {
+  font-family: "Vazirmatn";
+  src: url("/assets/fonts/Vazirmatn-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
   font-family: "Changa";
   src: url("/assets/fonts/Changa-SemiBold.ttf") format("truetype");
   font-weight: 600;
@@ -46,6 +54,12 @@
   font-family: "Changa";
   src: url("/assets/fonts/Changa-Regular.ttf") format("truetype");
   font-weight: 400;
+}
+
+@font-face {
+  font-family: "Changa";
+  src: url("/assets/fonts/Changa-Bold.ttf") format("truetype");
+  font-weight: 700;
 }
 
 .font-Changa {
@@ -82,4 +96,14 @@ body {
 
 .moon {
   animation: rotatePlanet 22s linear infinite;
+}
+
+.padding-all-sections {
+  margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+  .padding-all-sections {
+    margin-top: 0;
+  }
 }

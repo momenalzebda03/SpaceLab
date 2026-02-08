@@ -1,0 +1,12 @@
+interface dataTitle {
+    title: string;
+    padding: string;
+}
+
+export default function IsTitle({ padding, title }: dataTitle) {
+    return <div className="flex" data-aos="fade-up">
+        <div className={`${padding} font-light text-xs md:text-base rounded-full bg-[var(--is-color-title)]`}>
+            <h2>{title}</h2>
+        </div>
+    </div>
+}

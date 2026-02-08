@@ -75,7 +75,7 @@ export default function Header() {
     top-0
     border border-b-2 border-[var(--is-border-header)]
     bg-[var(--is-background-body)]
-    z-1
+    z-5
     ${isScrollingDown ? "-translate-y-full" : "translate-y-0"}
   `}
         >
