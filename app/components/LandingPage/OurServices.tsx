@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useDataOurServices } from "@/app/data/ourServices";
 
 export default function OurServices() {
-    const { t, mounted } = useTranslationSetup();
+    const { i18n, t, mounted } = useTranslationSetup();
     const ourServices = useDataOurServices();
 
     return (
@@ -43,28 +43,28 @@ export default function OurServices() {
                                         <div className="rounded-[32px] image absolute w-full md:w-[264px] h-full">
                                             <Image src={`/assets/icons/${item.image}.svg`} alt="services" fill className="object-cover" />
                                         </div>
-                                        <div className="text-white px-[24px] py-[40px]">
-                                            <div className="flex flex-col gap-[40px]">
+                                        <div className="text-white px-[24px] py-[40px] h-full">
+                                            <div className="flex flex-col justify-between gap-[40px] h-full">
                                                 <div className="flex flex-col gap-[16px]">
                                                     <h2 className="font-bold font-Changa text-[20px] md:text-[40px]">{mounted ? item.title : '...'}</h2>
-                                                    <div className="w-[80%] md:w-[387px]">
+                                                    <div className="w-[80%] md:w-[430px]">
                                                         <span className="leading-[1.5] text-md md:text-2xl font-semibold">{mounted ? item.text : '...'}</span>
                                                     </div>
                                                 </div>
                                                 <div className="flex">
-                                                    <Link href={item.link} title="ابدأ الان" className="relative group font-bold text-2xl inline-block overflow-hidden pe-7">
-                                                        <span>ابدأ الان</span>
+                                                    <Link href={item.link} title={mounted ? t("start-now") : '...'} className="relative group font-bold text-2xl inline-block overflow-hidden pe-7">
+                                                        <span>{mounted ? t("start-now") : '...'}</span>
                                                         <Image
                                                             src="/assets/icons/arraw.svg"
                                                             alt="arrow"
-                                                            className="absolute top-[5px] left-0 transition-all duration-300 group-hover:-top-5 group-hover:left-5"
+                                                            className={`${mounted ? i18n.language === 'ar' ? "left-0 group-hover:left-5" : "rotate-[-80deg] right-0 group-hover:right-5" : ""} absolute top-[5px] transition-all duration-300 group-hover:-top-5`}
                                                             width={24}
                                                             height={24}
                                                         />
                                                         <Image
                                                             src="/assets/icons/arraw.svg"
                                                             alt="arrow"
-                                                            className="absolute top-[30px] -left-5 transition-all duration-300 group-hover:top-[5px] group-hover:left-0"
+                                                            className={`${mounted ? i18n.language === 'ar' ? "-left-5 group-hover:left-0" : "rotate-[-80deg] -right-5 group-hover:right-0" : ""} absolute top-[30px] transition-all duration-300 group-hover:top-[5px]`}
                                                             width={24}
                                                             height={24}
                                                         />
