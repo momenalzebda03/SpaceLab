@@ -34,7 +34,7 @@ export default function WhatDistinguishesUs() {
                                                 </span>
                                             </div>
                                             <div>
-                                                <Btn value={mounted ? t("start-your-journey") : '...'} padding='px-7 py-[7px] md:px-10 md:py-[11px]' />
+                                                <Btn value={mounted ? t("start-your-journey") : '...'} isStyle='px-7 py-[7px] md:px-10 md:py-[11px]' />
                                             </div>
                                         </div>
                                     </div>

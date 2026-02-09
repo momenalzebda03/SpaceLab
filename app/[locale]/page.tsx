@@ -1,3 +1,4 @@
+import ContactUs from "../components/LandingPage/ContactUs";
 import Hero from "../components/LandingPage/Hero";
 import Numbers from "../components/LandingPage/Numbers";
 import OurBusiness from "../components/LandingPage/OurBusiness";
@@ -16,6 +17,7 @@ export default function Home() {
       <OurServices />
       <OurMethodology />
       <OurBusiness />
+      <ContactUs />
       <h2>Hello World</h2>
       <h2>Hello World</h2>
       <h2>Hello World</h2>

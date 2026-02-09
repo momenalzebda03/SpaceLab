@@ -1,20 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
-import { useEffect } from "react";
 import { useTranslationSetup } from "@/app/hooks/useTranslationSetup";
 import IsTitle from "../public/IsTitle";
 import Btn from "../public/Btn";
+import { useFancybox } from "@/app/hooks/useFancybox";
 
 export default function OurBusiness() {
     const { t, mounted } = useTranslationSetup();
 
-    useEffect(() => {
-        Fancybox.bind('[data-fancybox="gallery"]', {});
-        return () => Fancybox.destroy();
-    }, []);
+    useFancybox();
 
     return (
         <section>
@@ -22,7 +18,7 @@ export default function OurBusiness() {
                 <div className="container">
                     <div className="flex flex-col gap-[40px]">
                         <div className="grid md:grid-cols-[8.4fr_4.7fr] items-start gap-[41px] md:gap-[71px]">
-                            <div className="h-full flex flex-col md:flex-row gap-[24px]" data-aos="fade-up">
+                            <div className="h-full flex flex-col lg:flex-row gap-[24px]" data-aos="fade-up">
                                 <a href="/assets/icons/our-business-1.svg" data-fancybox="gallery" className="overflow-hidden relative w-full h-[250px] md:h-full rounded-[32px]">
                                     <Image src="/assets/icons/our-business-1.svg" alt="our business" fill className="transition-all duration-500 scale-100 hover:scale-110 object-cover rounded-[32px]" />
                                 </a>
@@ -43,10 +39,10 @@ export default function OurBusiness() {
                                     </h2>
                                 </div>
                                 <span className="leading-[1.5] text-xs md:text-4xl font-normal text-[var(--is-color-text-hero)]">{mounted ? t("journey-des") : "..."}</span>
-                                <Btn icon="network" value={mounted ? t("our-portfolio") : '...'} padding='px-7 py-[11px]' />
+                                <Btn icon="network" value={mounted ? t("our-portfolio") : '...'} isStyle='px-7 py-[11px]' />
                             </div>
                         </div>
-                        <div className="grid md:grid-cols-2 h-[450px] md:h-[376px] gap-[24px]">
+                        <div className="grid md:grid-cols-2 h-[450px] md:h-[376px] gap-[24px]" data-aos="fade-up">
                             <a href="/assets/icons/our-business-3.svg" data-fancybox="gallery" className="overflow-hidden relative w-full h-full rounded-[32px]">
                                 <Image src="/assets/icons/our-business-3.svg" alt="our business" fill className="transition-all duration-500 scale-100 hover:scale-110 object-cover rounded-[32px]" />
                             </a>

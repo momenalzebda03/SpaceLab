@@ -2,6 +2,8 @@
 
 :root {
   --is-background-body: #15062E;
+  --is-background-body-tow: #451294;
+  --is-background-contact-us: #46129455;
   --is-border-header: #CCA63C33;
   --is-color-one-text: #702BDB;
   --is-color-tow-text: #C2994D;
@@ -19,6 +21,9 @@
   --is-color-in-border: #6c69693d;
   --is-color-one-methodology: #9B51E00D;
   --is-color-tow-methodology: #6C7BFF0D;
+  --is-color-tow-contact-us: #FFFFFF1A;
+  --is-color-title-contact: #B3B3B3;
+  --is-color-placeholder: #919191;
 }
 
 @font-face {

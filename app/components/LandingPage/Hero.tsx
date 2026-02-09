@@ -45,7 +45,7 @@ export default function Hero() {
                             text={mounted ? t("we-create-solutions-numbers") : "..."} />
                         <div className="flex flex-col items-center gap-[10px]">
                             <div className="flex gap-[22px] md:gap-[32px]">
-                                <Btn value={mounted ? t("contact-us") : '...'} padding='px-5 py-[7px] md:px-10 md:py-[11px]' />
+                                <Btn value={mounted ? t("contact-us") : '...'} isStyle='px-5 py-[7px] md:px-10 md:py-[11px]' />
                                 <Link href="/">
                                     <div title={mounted ? t("our-portfolio") : '...'}
                                         className="flex items-center gap-1 border border-2 border-[var(--is-border-btn)] rounded-full px-5 py-[7px] md:py-[11px] text-[16px] cursor-pointer hover:bg-[var(--is-border-btn)] transition-all duration-200">

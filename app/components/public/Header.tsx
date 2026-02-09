@@ -91,7 +91,7 @@ export default function Header() {
                         </DisclosureButton>
                     </div>
                     <div className='hidden lg:flex gap-[24px]'>
-                        <Btn value={mounted ? t("start-your-project") : '...'} padding='px-7 py-[11px]' />
+                        <Btn value={mounted ? t("start-your-project") : '...'} isStyle='px-7 py-[11px]' />
                         <button
                             onClick={toggleLanguage}
                             type="button"
@@ -117,7 +117,7 @@ export default function Header() {
                     <Links />
                 </ul>
                 <div className='flex gap-[24px]'>
-                    <Btn value={mounted ? t("start-your-project") : '...'} padding='px-7 py-[11px]' />
+                    <Btn value={mounted ? t("start-your-project") : '...'} isStyle='px-7 py-[11px]' />
                     <button
                         onClick={toggleLanguage}
                         type="button"
