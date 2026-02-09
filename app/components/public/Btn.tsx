@@ -3,9 +3,10 @@ import Image from "next/image";
 interface BtnProps {
     value: string;
     padding: string;
+    icon?: string;
 }
 
-export default function Btn({ value, padding }: BtnProps) {
+export default function Btn({ icon = "phone", value, padding }: BtnProps) {
     return <button
         type="button"
         title={value}
@@ -13,7 +14,7 @@ export default function Btn({ value, padding }: BtnProps) {
     >
         <span className="relative z-1 text-white text-sm md:text-base font-normal">{value}</span>
         <div className="relative w-[15px] h-[15px] md:w-[20px] md:h-[20px]">
-            <Image src="/assets/icons/phone.svg" alt='phone' fill />
+            <Image src={`/assets/icons/${icon}.svg`} alt={icon} fill />
         </div>
     </button>
 }

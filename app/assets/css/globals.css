@@ -142,4 +142,12 @@ body {
   .padding-all-sections {
     margin-top: 0;
   }
+
+  @keyframes orbitPlanet {
+
+    0%,
+    100% {
+      transform: rotate(0deg) translateX(0) rotate(0deg);
+    }
+  }
 }
