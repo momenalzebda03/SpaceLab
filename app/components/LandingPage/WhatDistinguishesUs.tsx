@@ -12,7 +12,7 @@ export default function WhatDistinguishesUs() {
 
     return (
         <section>
-            <div className="pb-20 relative before:content-[''] before:absolute before:w-full before:h-full before:bg-[url('/images/bgWhyUs.webp')] before:opacity-30 before:z-[-1]">
+            <div className="pb-20 relative">
                 <div className="padding-all-sections">
                     <div className="container">
                         <div data-aos="fade-up">

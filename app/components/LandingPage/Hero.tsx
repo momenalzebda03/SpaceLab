@@ -43,19 +43,21 @@ export default function Hero() {
     </h2>
   `}
                             text={mounted ? t("we-create-solutions-numbers") : "..."} />
-                        <div className="flex gap-[22px] md:gap-[32px]">
-                            <Btn value={mounted ? t("contact-us") : '...'} padding='px-5 py-[7px] md:px-10 md:py-[11px]' />
-                            <Link href="/">
-                                <div title={mounted ? t("our-portfolio") : '...'}
-                                    className="flex items-center gap-1 border border-2 border-[var(--is-border-btn)] rounded-full px-5 py-[7px] md:py-[11px] text-[16px] cursor-pointer hover:bg-[var(--is-border-btn)] transition-all duration-200">
-                                    <span className="mt-[0.1px]">{mounted ? t("our-portfolio") : '...'}</span>
-                                    <div className="relative w-[15px] h-[15px] md:w-[24px] md:h-[24px]">
-                                        <Image src="/assets/icons/network.svg" alt="ايقونة الاعمال" fill />
+                        <div className="flex flex-col items-center gap-[10px]">
+                            <div className="flex gap-[22px] md:gap-[32px]">
+                                <Btn value={mounted ? t("contact-us") : '...'} padding='px-5 py-[7px] md:px-10 md:py-[11px]' />
+                                <Link href="/">
+                                    <div title={mounted ? t("our-portfolio") : '...'}
+                                        className="flex items-center gap-1 border border-2 border-[var(--is-border-btn)] rounded-full px-5 py-[7px] md:py-[11px] text-[16px] cursor-pointer hover:bg-[var(--is-border-btn)] transition-all duration-200">
+                                        <span className="mt-[0.1px]">{mounted ? t("our-portfolio") : '...'}</span>
+                                        <div className="relative w-[15px] h-[15px] md:w-[24px] md:h-[24px]">
+                                            <Image src="/assets/icons/network.svg" alt="ايقونة الاعمال" fill />
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>
+                                </Link>
+                            </div>
                         </div>
-                        {/* <Image src="/assets/icons/test.svg" alt="صورة الكوكب" width={564} height={626} className="object-cover" /> */}
+                        <img src="/assets/icons/planet.png" alt="صورة الكوكب" className="planet drop-shadow-[0_0_20px_white]" />
                     </div>
                 </div>
             </div>

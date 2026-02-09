@@ -12,6 +12,10 @@
   --is-color-text-hero: #D1D5DC;
   --is-color-tow-image: #260e50d5;
   --is-color-in-platform: #D1D1D1;
+  --is-color-card-1: #712CD9;
+  --is-color-one-card: #533F2900;
+  --is-color-tow-card: #712CD999;
+  --is-color-card-three-1: #4F4EFA99;
 }
 
 @font-face {
@@ -106,6 +110,25 @@ body {
 
 .moon {
   animation: rotatePlanet 22s linear infinite;
+}
+
+@keyframes orbitPlanet {
+  0% {
+    transform: rotate(0deg) translateX(10px) rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg) translateX(15px) rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(10px) rotate(-360deg);
+  }
+}
+
+.planet {
+  animation: orbitPlanet 7s linear infinite;
+  transform-origin: center center;
 }
 
 .padding-all-sections {

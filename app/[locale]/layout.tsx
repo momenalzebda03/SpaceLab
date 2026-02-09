@@ -16,12 +16,11 @@ export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
   const { locale } = React.use(params);
   const [mounted, setMounted] = useState(false);
 
-  setLanguageFromLocale(locale);
-
   useEffect(() => {
+    setLanguageFromLocale(locale);
     document.documentElement.lang = locale;
     document.documentElement.dir = locale === "ar" ? "rtl" : "ltr";
-    setMounted(true)
+    setMounted(true);
   }, [locale]);
 
   if (!mounted) return null;

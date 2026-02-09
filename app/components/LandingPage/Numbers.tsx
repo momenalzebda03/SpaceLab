@@ -11,7 +11,7 @@ export default function Numbers() {
 
     return (
         <section>
-            <div className="mt-20 bg-[linear-gradient(217deg,#702BDB_0%,#CCA63C_100%)] py-13 flex flex-col">
+            <div className="md:mt-20 bg-[linear-gradient(217deg,#702BDB_0%,#CCA63C_100%)] py-13 flex flex-col">
                 <div className="container">
                     <ul className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-15">
                         {initialNumbers.map((item, index) => (
@@ -21,7 +21,7 @@ export default function Numbers() {
                   before:content-[''] before:absolute before:h-full ${mounted ? i18n.language === 'ar' ? "before:left-0" : "before:-left-6" : ""} before:top-2
                   before:w-[0.1px] before:md:bg-white`}
                             >
-                                <h2 className="font-Outfit font-bold text-5xl md:text-7xl">
+                                <h2 className="font-Outfit font-bold text-3xl md:text-7xl">
                                     <CountUp
                                         start={0}
                                         end={item.value}
@@ -34,7 +34,7 @@ export default function Numbers() {
                                         )}
                                     </CountUp>
                                 </h2>
-                                <span className="font-Changa font-bold text-xl md:text-3xl">{item.label}</span>
+                                <span className="font-Changa font-bold text-md md:text-3xl">{item.label}</span>
                             </li>
                         ))}
                     </ul>
