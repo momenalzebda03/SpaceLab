@@ -10,7 +10,7 @@ export default function OurMethodology() {
     const methodology = useDataMethodology();
 
     return (
-        <section className="relative">
+        <section className="relative" id="the-operation">
             <div className="absolute w-full h-full">
                 <Image src="/assets/icons/container.svg" alt="container" fill />
             </div>
@@ -35,14 +35,14 @@ export default function OurMethodology() {
                         <div className="mt-5 bg-[var(--color-body)] rounded-lg">
                             <ul className="grid md:grid-cols-2 gap-[16px]">
                                 {methodology.map((item, index) => (
-                                    <li key={index} data-aos="fade-up" className="bg-gradient-to-r to-[var(--is-color-one-methodology)] from-[var(--is-color-tow-methodology)] text-white border border-1 border-[var(--is-color-in-border)] rounded-[24px] py-[28px] px-[24px] flex gap-5">
+                                    <li key={index} data-aos="fade-up" className="bg-gradient-to-r to-[var(--is-color-one-methodology)] from-[var(--is-color-tow-methodology)] text-white border border-1 border-[var(--is-color-in-border)] rounded-[24px] py-[15px] px-[14px] flex gap-5">
                                         <div className="flex gap-5 items-center group w-full">
-                                            <div className="flex items-center justify-center bg-[var(--is-border-btn)] rounded-[16px] p-5 w-[60px] h-[60px]">
-                                                <span className="font-Outfit font-bold text-4xl">{index + 1}</span>
+                                            <div className="flex items-center justify-center bg-[var(--is-border-btn)] rounded-[16px] p-5 w-[50px] h-[50px]">
+                                                <span className="font-Outfit font-bold text-2xl">{index + 1}</span>
                                             </div>
-                                            <div className="md:w-[400px] flex flex-col gap-[16px]">
+                                            <div className="md:w-[400px] flex flex-col gap-[10px]">
                                                 <span className="font-Changa font-bold text-sm md:text-xl">{mounted ? t(item.title) : '...'}</span>
-                                                <span className="font-normal text-sm md:text-xl leading-8 text-[var(--is-color-in-platform)]">
+                                                <span className="font-normal text-sm leading-5 text-[var(--is-color-in-platform)]">
                                                     {item.description}
                                                 </span>
                                             </div>

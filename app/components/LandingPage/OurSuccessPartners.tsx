@@ -13,7 +13,7 @@ export default function OurSuccessPartenrs() {
     const items = useDataOurSuccess();
 
     return (
-        <section>
+        <section id="our-partners">
             <div className="flex flex-col gap-[30px] md:gap-[70px] mt-[56px]">
                 <div className="container">
                     <div className="text-white flex justify-center text-center">

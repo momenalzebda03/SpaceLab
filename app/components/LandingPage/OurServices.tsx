@@ -11,7 +11,7 @@ export default function OurServices() {
     const ourServices = useDataOurServices();
 
     return (
-        <section>
+        <section id="services">
             <div className="padding-all-sections">
                 <div className="container">
                     <div className="mt-13 md:mt-0 gap-[40px] md:gap-[77px] flex flex-col">
@@ -46,25 +46,25 @@ export default function OurServices() {
                                         <div className="text-white px-[24px] py-[40px] h-full">
                                             <div className="flex flex-col justify-between gap-[40px] h-full">
                                                 <div className="flex flex-col gap-[16px]">
-                                                    <h2 className="font-bold font-Changa text-[20px] md:text-[40px]">{mounted ? item.title : '...'}</h2>
+                                                    <h2 className="font-bold font-Changa text-lg">{mounted ? item.title : '...'}</h2>
                                                     <div className="w-[80%] md:w-[430px]">
-                                                        <span className="leading-[1.5] text-md md:text-2xl font-semibold">{mounted ? item.text : '...'}</span>
+                                                        <span className="leading-[1.5] text-sm font-semibold">{mounted ? item.text : '...'}</span>
                                                     </div>
                                                 </div>
                                                 <div className="flex">
-                                                    <Link href={item.link} title={mounted ? t("start-now") : '...'} className="relative group font-bold text-2xl inline-block overflow-hidden pe-7">
+                                                    <Link href={item.link} title={mounted ? t("start-now") : '...'} className="items-center flex relative group font-bold text-sm overflow-hidden pe-7">
                                                         <span>{mounted ? t("start-now") : '...'}</span>
                                                         <Image
                                                             src="/assets/icons/arraw.svg"
                                                             alt="arrow"
-                                                            className={`${mounted ? i18n.language === 'ar' ? "left-0 group-hover:left-5" : "rotate-[-80deg] right-0 group-hover:right-5" : ""} absolute top-[5px] transition-all duration-300 group-hover:-top-5`}
+                                                            className={`${mounted ? i18n.language === 'ar' ? "left-0 group-hover:left-5" : "rotate-[-80deg] right-0 group-hover:right-5" : ""} absolute top-[-2px] transition-all duration-300 group-hover:-top-5`}
                                                             width={24}
                                                             height={24}
                                                         />
                                                         <Image
                                                             src="/assets/icons/arraw.svg"
                                                             alt="arrow"
-                                                            className={`${mounted ? i18n.language === 'ar' ? "-left-5 group-hover:left-0" : "rotate-[-80deg] -right-5 group-hover:right-0" : ""} absolute top-[30px] transition-all duration-300 group-hover:top-[5px]`}
+                                                            className={`${mounted ? i18n.language === 'ar' ? "-left-5 group-hover:left-0" : "rotate-[-80deg] -right-5 group-hover:right-0" : ""} absolute top-[30px] transition-all duration-300 group-hover:top-[-2px]`}
                                                             width={24}
                                                             height={24}
                                                         />

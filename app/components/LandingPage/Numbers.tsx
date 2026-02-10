@@ -21,7 +21,7 @@ export default function Numbers() {
                   before:content-[''] before:absolute before:h-full ${mounted ? i18n.language === 'ar' ? "before:left-0" : "before:-left-6" : ""} before:top-2
                   before:w-[0.1px] before:md:bg-white`}
                             >
-                                <h2 className="font-Outfit font-bold text-3xl md:text-7xl">
+                                <h2 className="font-Outfit font-bold text-2xl md:text-4xl">
                                     <CountUp
                                         start={0}
                                         end={item.value}
@@ -34,7 +34,7 @@ export default function Numbers() {
                                         )}
                                     </CountUp>
                                 </h2>
-                                <span className="font-Changa font-bold text-md md:text-3xl">{item.label}</span>
+                                <span className="font-Changa font-bold text-sm md:text-base">{item.label}</span>
                             </li>
                         ))}
                     </ul>

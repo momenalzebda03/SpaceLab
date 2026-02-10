@@ -16,7 +16,7 @@ export default function IsTitleOne({ padding, isTitle, isTitleOne, text }: dataT
             <div className="md:w-[570px] flex flex-col gap-[10px] md:gap-[16px] font-Changa">
                 <div dangerouslySetInnerHTML={{ __html: isTitleOne }} />
             </div>
-            <span className="text-xs md:text-xl font-normal text-[var(--is-color-text-hero)]">{text}</span>
+            <span className="text-sm font-normal text-[var(--is-color-text-hero)]">{text}</span>
         </div>
     )
 }

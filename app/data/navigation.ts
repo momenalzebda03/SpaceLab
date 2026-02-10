@@ -4,12 +4,12 @@ export const useDataNavigation = () => {
     const { t } = useTranslationSetup();
 
     return [
-        { name: t("home"), href: '#', current: true },
-        { name: t("our-partners"), href: '#', current: false },
-        { name: t("who-we-are"), href: '#', current: false },
-        { name: t("services"), href: '#', current: false },
-        { name: t("the-operation"), href: '#', current: false },
-        { name: t("our-works"), href: '#', current: false },
-        { name: t("contact-us"), href: '#', current: false },
+        { name: t("home"), href: '#' },
+        { name: t("our-partners"), href: '#our-partners' },
+        { name: t("who-we-are"), href: '#who-we-are' },
+        { name: t("services"), href: '#services' },
+        { name: t("the-operation"), href: '#the-operation' },
+        { name: t("our-works"), href: '#our-works' },
+        { name: t("contact-us"), href: '#contact-us' },
     ]
 }

@@ -11,7 +11,7 @@ export default function WhatDistinguishesUs() {
     const principles = useDataPrinciples();
 
     return (
-        <section>
+        <section id="who-we-are">
             <div className="pb-20 relative">
                 <div className="padding-all-sections">
                     <div className="container">
@@ -23,13 +23,13 @@ export default function WhatDistinguishesUs() {
                                             <div className="flex flex-col gap-5">
                                                 <div className="flex">
                                                     <div className="border border-2 border-[var(--is-border-btn)] rounded-full px-7 py-[7px] md:py-[7px]">
-                                                        <h3 className="text-sm md:text-xl font-semibold">{mounted ? t("what-distinguishes-us") : '...'}</h3>
+                                                        <h3 className="text-xs font-semibold">{mounted ? t("what-distinguishes-us") : '...'}</h3>
                                                     </div>
                                                 </div>
-                                                <h2 className="md:leading-15 text-xl md:text-5xl font-Changa font-bold">
+                                                <h2 className="md:leading-15 text-xl md:text-4xl font-Changa font-bold">
                                                     {mounted ? t("enhance-digital-impact") : '...'}
                                                 </h2>
-                                                <span className="font-semibold text-sm md:text-xl leading-8 text-[var(--is-color-in-platform)]">
+                                                <span className="font-semibold text-sm md:text-base leading-8 text-[var(--is-color-in-platform)]">
                                                     {mounted ? t("in-platform-space") : '...'}
                                                 </span>
                                             </div>
@@ -46,9 +46,9 @@ export default function WhatDistinguishesUs() {
 
                                     <IsTitle padding="px-5 py-2 md:px-5 md:py-1" title={mounted ? t("why-choose-us") : '...'} />
 
-                                    <h2 className="font-Changa text-xl md:text-5xl font-bold">{mounted ? t("confirm-designs") : '...'} <span className="text-[var(--is-color-active)]">{mounted ? t("sales") : '...'}</span></h2>
+                                    <h2 className="font-Changa text-xl md:text-4xl font-bold">{mounted ? t("confirm-designs") : '...'} <span className="text-[var(--is-color-active)]">{mounted ? t("sales") : '...'}</span></h2>
 
-                                    <span className="text-[var(--is-color-in-platform)] font-semibold text-sm md:text-xl leading-8 text-[var(--color-text-why-choose)]">
+                                    <span className="text-[var(--is-color-in-platform)] font-semibold text-sm md:text-base leading-8 text-[var(--color-text-why-choose)]">
                                         {mounted ? t("we-provide-solutions") : '...'}
                                     </span>
 
@@ -63,8 +63,8 @@ export default function WhatDistinguishesUs() {
                                                             </div>
                                                         </div>
                                                         <div className="md:w-[600px] flex flex-col gap-2">
-                                                            <span className="font-Changa font-bold text-sm md:text-xl">{mounted ? t(item.title) : '...'}</span>
-                                                            <span className="font-normal text-sm md:text-xl leading-8 text-[var(--is-color-in-platform)]">
+                                                            <span className="font-Changa font-bold text-lg">{mounted ? t(item.title) : '...'}</span>
+                                                            <span className="font-normal text-sm leading-8 text-[var(--is-color-in-platform)]">
                                                                 {item.description}
                                                             </span>
                                                         </div>

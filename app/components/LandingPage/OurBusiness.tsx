@@ -13,7 +13,7 @@ export default function OurBusiness() {
     useFancybox();
 
     return (
-        <section>
+        <section id="our-works">
             <div className="pt-20 padding-all-sections">
                 <div className="container">
                     <div className="flex flex-col gap-[40px]">
@@ -32,13 +32,13 @@ export default function OurBusiness() {
                                 </div>
                                 <IsTitle padding="px-5 py-2 md:px-7 md:py-2" title={mounted ? t("grew-our-works") : '...'} />
                                 <div className="flex flex-col gap-[10px] md:gap-[16px] font-Changa">
-                                    <h2 className="text-sm md:text-7xl leading-[1.5] font-semibold">
+                                    <h2 className="text-xl md:text-5xl leading-[1.5] font-semibold">
                                         <span className="text-[var(--is-color-active)]">
                                             {mounted ? t("journey") : "..."}
                                         </span>
                                     </h2>
                                 </div>
-                                <span className="leading-[1.5] text-xs md:text-4xl font-normal text-[var(--is-color-text-hero)]">{mounted ? t("journey-des") : "..."}</span>
+                                <span className="leading-[1.5] text-md font-normal text-[var(--is-color-text-hero)]">{mounted ? t("journey-des") : "..."}</span>
                                 <Btn icon="network" value={mounted ? t("our-portfolio") : '...'} isStyle='px-7 py-[11px]' />
                             </div>
                         </div>

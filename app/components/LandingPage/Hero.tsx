@@ -7,30 +7,30 @@ import Link from "next/link";
 import IsTitleOne from "../public/IsTitleOne";
 
 export default function Hero() {
-    const { i18n, t, mounted } = useTranslationSetup();
+    const { t, mounted } = useTranslationSetup();
 
     return (
         <main>
             <div className="py-5 md:py-0 flex justify-center items-center relative">
-                <div className="overflow-hidden -z-1 absolute w-full h-[1100px] -top-65">
+                <div className="-z-1 absolute hidden xl:block w-full max-w-[1400px] h-[1400px] -top-20">
                     <div className="relative w-full h-full">
-                        <Image src="/assets/icons/lines-hero.svg" alt="الخلفية" fill className="object-cover" />
+                        <Image src="/assets/icons/bg-planet.svg" alt="الخلفية" fill className="object-cover" />
                     </div>
                 </div>
                 <div className="md:mt-15 container flex items-center justify-center h-full text-center" data-aos="fade-up">
                     <div className="hidden md:flex absolute h-full w-full z-[-1]">
-                        <div className={`${mounted ? i18n.language === 'en' && "right-0" : ""} flex flex-col gap-[100px] top-25 absolute`}>
+                        <div className="right-40 flex flex-col gap-[100px] top-35 absolute">
                             <Image src="/assets/icons/moon.svg" alt="moon" width={136} height={136} className="moon" />
                             <Image src="/assets/icons/moon.svg" alt="moon" width={50} height={50} className="moon" />
                         </div>
-                        <div className="flex flex-col items-end gap-[100px] left-0 top-25 absolute">
+                        <div className="flex flex-col items-end gap-[100px] left-60 top-25 absolute">
                             <Image src="/assets/icons/moon.svg" alt="moon" width={136} height={136} className="moon" />
                             <Image src="/assets/icons/moon.svg" alt="moon" width={50} height={50} className="moon" />
                         </div>
                     </div>
                     <div className="text-white flex flex-col items-center gap-[20px] md:gap-[56px]">
-                        <IsTitleOne padding="px-5 py-2 md:px-7 md:py-4" isTitle={mounted ? t("space-platform") : '...'} isTitleOne={`
-    <h2 class="text-sm md:text-5xl leading-[1.5] font-semibold">
+                        <IsTitleOne padding="px-5 py-2.5" isTitle={mounted ? t("space-platform") : '...'} isTitleOne={`
+    <h2 class="text-3xl md:text-5xl leading-[1.5] font-semibold">
       ${mounted ? t("travel-through-space") : "..."}
       <span class="text-[var(--is-color-active)]">
         ${mounted ? t("the-universe") : "..."}
@@ -57,7 +57,9 @@ export default function Hero() {
                                 </Link>
                             </div>
                         </div>
-                        <img src="/assets/icons/planet.png" alt="صورة الكوكب" className="planet drop-shadow-[0_0_20px_white]" />
+                        <div className="relative flex justify-center">
+                            <img src="/assets/icons/planet.png" alt="صورة الكوكب" className="planet drop-shadow-[0_0_20px_white]" />
+                        </div>
                     </div>
                 </div>
             </div>

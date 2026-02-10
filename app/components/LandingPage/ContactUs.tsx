@@ -11,21 +11,21 @@ export default function ContactUs() {
     useFancybox();
 
     return (
-        <section className="bg-gradient-to-t from-[var(--is-background-contact-us)] to-[var(--is-background-body)]">
+        <section id="contact-us" className="bg-gradient-to-t from-[var(--is-background-contact-us)] to-[var(--is-background-body)]">
             <div className="py-10 md:py-30 relative padding-all-sections">
                 <div className="absolute w-full h-full">
                     <Image src="/assets/icons/container-contact-us.svg" alt="contact us background" fill className="object-cover" />
                 </div>
                 <div className="container">
-                    <div className="text-white grid md:grid-cols-[5fr_7fr]" data-aos="fade-up">
+                    <div className="text-white grid md:grid-cols-2" data-aos="fade-up">
                         <a className="overflow-hidden relative w-full h-[400px] md:h-full" href="/assets/icons/contact-us.svg" data-fancybox="gallery">
                             <Image src="/assets/icons/contact-us.svg" alt="contact us" fill className="transition-all duration-500 scale-100 hover:scale-105 object-cover" />
                         </a>
                         <div className="rounded-[24px] py-[30px] md:py-[64px] px-[12px] md:px-[32px] w-full bg-gradient-to-r to-(--is-bg-lang) from-(--is-color-tow-contact-us)">
-                            <div className="flex flex-col gap-[14px] md:gap-[64px]">
+                            <div className="flex flex-col gap-[14px] md:gap-[44px]">
                                 <div className="flex flex-col gap-[6px] md:gap-[16px] items-center">
-                                    <h2 className="text-[var(--is-color-title-contact)] text-md md:text-xl font-normal">{mounted ? t("contact-us-form") : '...'}</h2>
-                                    <span className="text-white font-Changa font-bold text-2xl md:text-5xl">{mounted ? t("welcome-contact-us") : '...'}</span>
+                                    <h2 className="text-[var(--is-color-title-contact)] text-xs font-normal">{mounted ? t("contact-us-form") : '...'}</h2>
+                                    <span className="text-white font-Changa font-bold text-2xl md:text-3xl">{mounted ? t("welcome-contact-us") : '...'}</span>
                                 </div>
                                 <form className="relative">
                                     <Image src="/assets/icons/air.svg" alt="air" width={696} height={404} className="absolute -top-55 md:-left-12" />

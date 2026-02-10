@@ -1,15 +1,14 @@
 "use client";
 
 import Image from 'next/image';
-import { Disclosure, DisclosureButton } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link';
+import { Disclosure, DisclosureButton } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useEffect, useRef, useState } from 'react';
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslationSetup } from '@/app/hooks/useTranslationSetup';
-// import { useDataNavigation } from '@/app/data/navigation';
 import Links from './Links';
 import Btn from './Btn';
+import TitleSpaceLab from './TitleSpaceLab';
 
 export default function Header() {
     const { t, mounted, i18n } = useTranslationSetup();
@@ -80,7 +79,7 @@ export default function Header() {
   `}
         >
             <div className="container">
-                <div className="py-6 relative flex items-center justify-between">
+                <div className="py-4 relative flex items-center justify-between">
                     <div className={`${mounted ? i18n.language === 'ar' ? "left-0" : "right-0" : ""} absolute inset-y-0 flex items-center lg:hidden`}>
                         {/* Mobile menu button*/}
                         <DisclosureButton onClick={() => setOpen(!open)} className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
@@ -102,13 +101,11 @@ export default function Header() {
                         </button>
                     </div>
                     <div className="hidden lg:block">
-                        <ul className={`flex ${mounted ? i18n.language === 'ar' ? "gap-[56px]" : "gap-[26px]" : ""}`}>
+                        <ul className="flex gap-[36px]">
                             <Links />
                         </ul>
                     </div>
-                    <Link href="/" title='SpaceLab' className='font-Arial font-bold text-2xl bg-clip-text text-transparent gradient-text bg-[linear-gradient(90deg,var(--is-color-one-text),var(--is-color-tow-text))]'>
-                        SpaceLab
-                    </Link>
+                    <TitleSpaceLab />
                 </div>
             </div>
 

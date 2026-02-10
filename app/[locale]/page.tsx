@@ -18,12 +18,6 @@ export default function Home() {
       <OurMethodology />
       <OurBusiness />
       <ContactUs />
-      <h2>Hello World</h2>
-      <h2>Hello World</h2>
-      <h2>Hello World</h2>
-      <h2>Hello World</h2>
-      <h2>Hello World</h2>
-      <h2>Hello World</h2>
     </>
   );
 }

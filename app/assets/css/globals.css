@@ -1,4 +1,4 @@
-@import "tailwindcss";
+ @import "tailwindcss";
 
 :root {
   --is-background-body: #15062E;
@@ -24,6 +24,8 @@
   --is-color-tow-contact-us: #FFFFFF1A;
   --is-color-title-contact: #B3B3B3;
   --is-color-placeholder: #919191;
+  --is-color-links-footer: #99A1AF;
+  --is-color-line-top: #314158;
 }
 
 @font-face {
@@ -97,6 +99,10 @@ body {
   background-color: var(--is-background-body);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   width: 95%;
   max-width: 1350px;
@@ -106,13 +112,22 @@ body {
   padding-right: 0rem;
 }
 
+.footer-container {
+  width: 100%;
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
 @keyframes rotatePlanet {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
   }
 }
 
