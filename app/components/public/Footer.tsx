@@ -85,7 +85,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <Image src="/assets/icons/air.svg" alt="air" width={696} height={404} className="object-cover absolute top-20 md:-left-12" />
+            <Image src="/assets/icons/air.svg" alt="air" width={696} height={404} className="-z-1 object-cover absolute top-20 md:-left-12" />
         </footer>
     )
 }
