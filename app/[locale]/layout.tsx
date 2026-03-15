@@ -7,6 +7,7 @@ import Header from "../components/public/Header";
 import i18n, { setLanguageFromLocale } from "../lib/i18n";
 import AOSWrapper from "../components/AOSWrapper";
 import Footer from "../components/public/Footer";
+import Lien from "../components/public/Lien";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -30,6 +31,7 @@ export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
     <I18nextProvider i18n={i18n}>
       <AOSWrapper />
       <Header />
+      <Lien />
       {children}
       <Footer />
     </I18nextProvider>

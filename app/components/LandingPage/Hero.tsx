@@ -5,12 +5,31 @@ import Image from "next/image";
 import Btn from "../public/Btn";
 import Link from "next/link";
 import IsTitleOne from "../public/IsTitleOne";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import { useEffect } from "react";
 
 export default function Hero() {
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
+
+    const moveX = useTransform(x, [0, window.innerWidth], [-20, 20]);
+    const moveY = useTransform(y, [0, window.innerHeight], [-20, 20]);
+
+    useEffect(() => {
+        const handleMouseMove = (e: any) => {
+            x.set(e.clientX);
+            y.set(e.clientY);
+        };
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => window.removeEventListener("mousemove", handleMouseMove);
+    }, [x, y]);
+
     const { t, mounted } = useTranslationSetup();
 
     return (
-        <main>
+        <motion.section initial={{ clipPath: "circle(0% at 50% 50%)" }}
+            animate={{ clipPath: "circle(150% at 50% 50%)" }}
+            transition={{ duration: 1.8, ease: "easeInOut" }}>
             <div className="py-5 md:py-0 flex justify-center items-center relative">
                 <div className="-z-1 absolute hidden xl:block w-full max-w-[1400px] h-[1400px] -top-20">
                     <div className="relative w-full h-full">
@@ -58,11 +77,19 @@ export default function Hero() {
                             </div>
                         </div>
                         <div className="relative flex justify-center">
-                            <img src="/assets/icons/planet.png" alt="صورة الكوكب" className="planet drop-shadow-[0_0_20px_white]" />
+                            <motion.img
+                                src="/assets/icons/planet.png"
+                                alt="صورة الكوكب"
+                                className="planet drop-shadow-[0_0_20px_white]"
+                                style={{
+                                    x: moveX,
+                                    y: moveY,
+                                }}
+                            />
                         </div>
                     </div>
                 </div>
             </div>
-        </main >
+        </motion.section>
     )
 }

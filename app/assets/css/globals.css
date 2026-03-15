@@ -26,6 +26,7 @@
   --is-color-placeholder: #919191;
   --is-color-links-footer: #99A1AF;
   --is-color-line-top: #314158;
+  --is-color-red: rgba(255, 0, 0, 0.286);
 }
 
 @font-face {
@@ -134,7 +135,7 @@ html {
 .moon {
   animation: rotatePlanet 22s linear infinite;
 }
-
+/* 
 @keyframes orbitPlanet {
   0% {
     transform: rotate(0deg) translateX(10px) rotate(0deg);
@@ -147,7 +148,7 @@ html {
   100% {
     transform: rotate(360deg) translateX(10px) rotate(-360deg);
   }
-}
+} */
 
 .planet {
   animation: orbitPlanet 7s linear infinite;
@@ -163,11 +164,11 @@ html {
     margin-top: 0;
   }
 
-  @keyframes orbitPlanet {
+  /* @keyframes orbitPlanet {
 
     0%,
     100% {
       transform: rotate(0deg) translateX(0) rotate(0deg);
     }
-  }
+  } */
 }

@@ -8,7 +8,7 @@ export default function RootLayout({
     return (
         <html>
             <body>
-                <title>SpaceLab</title>
+                <title>SpaceLab</title>                
                 {children}
             </body>
         </html>
